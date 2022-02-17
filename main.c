@@ -81,6 +81,11 @@ int sum_inc_v8(int n){
 	return sum;
 }
 //end of increment approach
+int sum_dec_v2(int n){
+	int sum = 0;
+	for(; n > 0; sum += n--);
+	return sum;
+}
 int sum_dptr_v2(int n){
 	int sum = 0;
 	for(int i = 0; n != i; sum+= i++ + n--);
@@ -112,6 +117,7 @@ int main(){
 	printf("sum_inc_w%d = %d\n", ++i, sum_inc_w1(n));
 	i=0;
 	printf("sum_dec_v%d = %d\n", ++i, sum_dec_v1(n));
+	printf("sum_dec_v%d = %d\n", ++i, sum_dec_v2(n));
 	i=0;
 	printf("sum_dec_w%d = %d\n", ++i, sum_dec_w1(n));
 	printf("sum_dec_w%d = %d\n", ++i, sum_dec_w2(n));
